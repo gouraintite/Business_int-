@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;550;900&display=swap');
+
+body{
+	margin: 0 5rem;
+	padding: 0;
+	background-image: url('img/bg2.png');
+	background-repeat: no-repeat;	
+	background-size: 100%;
+	background-color:	rgba(83, 128, 234, 0.1);
+	font-family: 'Inter', sans-serif;
+}
+.section2{
+	background: url('img/bg2.png');
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2.6rem;
+	margin-bottom: 3rem;
+}
+
+.nav_links{
+	font-size: 0.9rem;
+	display: flex;
+	justify-content: space-around;
+}
+.nav_links :nth-child(1n){
+	padding: 0.27rem;
+	font-style: initial;
+	margin: 0.5rem;
+	margin-right: 0;
+}
+
+.nav_links div:last-child{
+	background-color: #F0B80D;
+	font-weight: bolder;
+	padding-right: 12px;
+	border-radius: 2rem;
+	box-shadow: 0 0 20px 0px #F0B80D;
+	cursor: pointer;
+}
+.nav_links a {
+	text-decoration: none;
+	color: black;
+}
+h1{
+	font-size: 2rem;
+	font-size: 900;
+}
+h1 span{
+	color: rgba(83, 128, 234, 1);
+	word-spacing: 3px;
+	line-height: 2.2;
+}
+.up_side{
+	display: flex;
+	justify-content: space-around;
+}
+.up_side .cards > div{
+	background: #fff;
+	display: flex;
+	margin-top:1.2rem ;
+	width: 575px;
+	height: 115px;
+	border-radius: 10px;
+	box-shadow: 0 24px 24px rgba(0, 0, 0, 0.14);
+	font-size: 0.9rem;
+	padding: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.up_side .cards :nth-child(4){
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 10% 30%, transparent 70%);
+	box-shadow: none;
+}
+.card_img{
+	display: flex;
+	align-items: center;
+}
+.up_side .cards  img{
+	width: 64px !important;
+	height: 64px !important;
+	margin-right: 15px;
+	vertical-align: center;
+	border: 3px solid rgba(83, 128, 234, 0.5);
+	border-radius: 50%;
+}
+
+.card_text :nth-child(1){
+	font-size: bold;
+}
+.card_text :nth-child(2){
+	line-height: 1.6;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+/*****************  main_img ************/
+.main_img {
+	margin-top: -130px;
+	padding: 2px;
+	padding-bottom: 2rem;
+	background: url('img/group.png') no-repeat;
+}
+
+/*************** down_side ***********************/
+
+.down_side{
+	margin-top: 4rem;
+}
+.down_side .cards{
+	width: 92%;
+	background: #F6FBF8;
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0 10px 60px 60px rgba(0, 0, 0, 0.03);
+	padding: 1.5rem;
+	padding-left: 2.7rem;
+	padding-right: 2rem;
+}
+
+.card_group{
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+}
+.card_group .card_text{
+	padding-left: 10px;
+}
+.trusted_by{
+	text-align: center;
+}
+.trusted_by p{
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.7);
+	width: 40%;
+	margin-top: -10px;
+}
+.trusted_by h2{
+	font-weight: initial;
+}
+  /***** slider *****/
+@keyframes scrolly {
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(calc(-250px * 3));
+	}
+}/*
+.vor{
+	color: transparent;
+	border: 1px solid green;
+	width: 25px;
+	height: 25px;
+	border-left: transparent;
+	border-bottom: transparent;
+	transform: rotate(45deg);
+}*/
+.main_slide{
+	display: flex;
+	justify-content: space- space-between;
+}
+.main_slide .sliding_one, .sliding_two{
+	margin-top: 6rem;
+}
+.sliding_one{
+	margin-left: 110px;
+}
+.sliding_two{
+	margin-right: 110px;
+}
+.brand_slide{
+	height: auto;
+	width: 60vw;
+	margin-left: 0;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	border: none;
+	box-shadow:inset 0 0 24px 50px rgba(0, 0, 0, 0.01);
+}
+.sliding_two::before, .sliding_one::before, .sliding_two::after, .sliding_one::after{
+	position: absolute;
+	width: 13px;
+	height: 2px;
+	background: #5380EA;
+	content:'';
+}
+.sliding_two::before{
+	transform: rotate(45deg);
+}
+.sliding_two::after{
+	transform: rotate(-45deg);
+	margin-top: 7px;
+}
+.sliding_one::before{
+	transform: rotate(-45deg);
+	margin-top: -7px;
+}
+.sliding_one::after{
+	transform: rotate(45deg);
+}
+
+.brand_slide .slide_track{
+  animation: scroll 2s infinite;
+	display: flex;
+	width: calc(350px * 3);
+	align-items: center;
+}
+
+.brand_slide .slide{
+	width: auto;
+	height: auto;
+	padding: 1rem;
+}
+/* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name */
+/* animation: 3s ease-in 1s 2 reverse both paused slidein;*/
+
+/************ section2 ***********/
+
+.main_section{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 6rem;
+}
+.main_img2{
+	background: url(img/woman.png) no-repeat;
+	width: 40vw;
+	height: 70vh;
+}
+.under_trusted::before, .under_trusted::after{
+	position: absolute;
+	content: '';
+	background: #F0B80D;
+	width: 65px;
+	height: 4px;
+	border: 5px;
+	align-items: center;
+	margin-left: -60px;
+	margin-top: -19px;
+
+}
+.under_trusted::before{
+	transform: rotate(-2deg);
+	margin-right: 25px;
+}
+.under_trusted::after{
+	transform: rotate(2deg);
+	margin-left: 5px;
+	border-top-left-radius:2px ;
+}
+.welcome_line{
+	position:absolute ;
+	margin-left: 260px;
+	margin-top: 3rem;
+}
+.form{
+	background: #fff;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.01);
+	border-radius: 20px;
+	margin: 2rem;
+	display: flex;
+	justify-content: center;
+	width: 30vw;
+	height: 30rem;
+	padding: 50px;
+	padding-top: 30px;
+	font-size: 0.8rem;
+	margin-top: -20px;
+}
+.form h3{
+	font-size: 1.6rem;
+}
+input{
+	width: 100%;
+	height: 9%;
+	border: 1px solid rgba(83, 128, 234, 0.3);
+	background: #F6FBF8;
+	border-radius: 5px;
+	box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.01);
+	margin-bottom: 25px;
+	margin-top: 9px;
+}
+.submit{
+	width: 45%;
+	height: 9%;
+	border: none;
+	background: rgba(83, 128, 234, 1);
+	color: #fff;
+	border-radius: 30px;
+	box-shadow: -6px 4px 23px 3px rgba(83, 128, 234, 0.5);
+	margin-bottom: 25px;
+	margin-top: 9px;
+	font-weight: bold;
+	font-size: 1rem;
+}
+label{
+	font-weight: bold;
+}
+label span{
+	color: red;
+}
+hr{
+	background: rgba(83, 128, 234, 1) !important;
+	height: 1px;
+	border: none;
+}
+.foot{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+/* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name 
+  animation: 3s ease-in 1s 2 reverse both paused slidein;*/
